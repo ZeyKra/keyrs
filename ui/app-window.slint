@@ -17,6 +17,15 @@ component key inherits Rectangle {
     }
 }
 
+component Keyboard inherits Rectangle {
+    width: 400px;
+    height: 280px;
+    HorizontalLayout {
+        key {}
+        key {}
+    }
+}
+
 
 export component AppWindow inherits Window {
     background: #020420;
@@ -24,6 +33,9 @@ export component AppWindow inherits Window {
     height: 550px;
     in-out property <int> counter: 42;
     callback request-increase-value();
+    
+    Keyboard {}
+    
     VerticalBox {
         Text {
             text: "Counter: \{root.counter}";
