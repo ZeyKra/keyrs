@@ -5,9 +5,14 @@ use std::error::Error;
 
 slint::include_modules!();
 
-
-
 fn main() -> Result<(), Box<dyn Error>> {
+
+    let azerty = vec![
+        vec!["a", "z", "e", "r", "t", "y", "u", "i", "o", "p"],
+        vec!["q", "s", "d", "f", "g", "h", "j", "k", "l", "m"],
+        vec!["w", "x", "c", "v", "b", "n"]
+    ];
+
     let ui = AppWindow::new()?;
 
     ui.on_request_increase_value({
